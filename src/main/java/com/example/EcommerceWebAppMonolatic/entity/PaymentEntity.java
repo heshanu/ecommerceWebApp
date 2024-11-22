@@ -19,4 +19,8 @@ public class PaymentEntity {
     private String reference;
     private  Long amount;
     private String status;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "notification_id", referencedColumnName = "id")
+    private NotificationEntity notification;
 }
