@@ -3,7 +3,16 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/springbootAPI
+    hikari:
+      pool-name: HikariPool-1
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      validation-timeout: 5000
+      leak-detection-threshold: 2000
+    url: jdbc:postgresql://localhost:5432/ecommercewebapi
     username: postgres
     password: postgres  # Ensure you provide the correct password or remove if not needed
     driverClassName: org.postgresql.Driver
@@ -13,5 +22,5 @@ spring:
     hibernate:
       ddl-auto: update
   application:
-    name: RestAPI
-    debug: truespring.application.name=EcommerceWebAppMonolatic
+    name: EcommerceWebAppMonolatic
+  debug: true

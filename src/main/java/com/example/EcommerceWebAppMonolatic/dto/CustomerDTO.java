@@ -1,5 +1,6 @@
 package com.example.EcommerceWebAppMonolatic.dto;
 
+import com.example.EcommerceWebAppMonolatic.entity.AddressEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -17,5 +18,6 @@ public class CustomerDTO {
     private String lastName;
     private String email;
     private String userName;
-    private String role;
+    private String roles;
+    private AddressEntity addressEntity;
 }
