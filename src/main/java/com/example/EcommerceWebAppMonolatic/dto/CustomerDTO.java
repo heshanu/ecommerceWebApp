@@ -20,4 +20,5 @@ public class CustomerDTO {
     private String userName;
     private String roles;
     private AddressEntity addressEntity;
+
 }
